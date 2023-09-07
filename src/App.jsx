@@ -13,7 +13,7 @@ function App() {
 				Welcome, using react with git
 			</h1>
 				<button onClick={() => setCount( count + 1)}>Update</button>
-				<p>You have clicked {count} number of times!</p>
+				<p>You have clicked {count} times!</p>
 		</>
 	)
 }
