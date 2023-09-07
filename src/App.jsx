@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -9,11 +7,12 @@ function App() {
 	return (
 		<>
 			<h1>
-				
 				Welcome, using react with git
 			</h1>
-				<button onClick={() => setCount( count + 1)}>Update</button>
-				<p>You have clicked {count} number of times!</p>
+
+			<button onClick={() => setCount(count + 1)}>Update</button>
+
+			<p>You have clicked {count} number of times!</p>
 		</>
 	)
 }
