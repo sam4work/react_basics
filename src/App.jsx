@@ -12,7 +12,7 @@ function App() {
 				
 				Welcome, using react with git
 			</h1>
-				<button onClick={setCount( count + 1)}>Update</button>
+				<button onClick={() => setCount( count + 1)}>Update</button>
 		</>
 	)
 }
