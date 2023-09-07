@@ -11,8 +11,8 @@ function App() {
 			<h1>
 				
 				Welcome, using react with git
-				<button onClick={setCount( count + 1)}></button>
 			</h1>
+				<button onClick={setCount( count + 1)}>Update</button>
 		</>
 	)
 }
