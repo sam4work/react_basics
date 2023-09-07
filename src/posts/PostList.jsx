@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
+import "./PostList.css"
 
 export default function PostList() {
-	const [trendingMovies, setTrendingMovies] = useState([])
+	const [trendingMovies, setTrendingMovies] = useState(null)
 
 	const getTrendingMovies = async () => {
 		const url = 'https://movies-tv-shows-database.p.rapidapi.com/?page=1';
@@ -16,7 +17,7 @@ export default function PostList() {
 
 		try {
 			const response = await fetch(url, options);
-			const result = await response.text();
+			const result = await response.json();
 			console.log(result);
 			setTrendingMovies(result)
 		} catch (error) {
@@ -33,23 +34,33 @@ export default function PostList() {
 
 
 	return (
-		<div>
+		<div className="card-wrapper">
 
 			{
-				trendingMovies && trendingMovies.length > 0 ?
+				trendingMovies ?
+					<>
+						{
+							trendingMovies.movie_results.map((movie, index) => (
+								<article className="card" key={"movie" + index}>
+									<div
+										className="card-image"
+										style={{
+											backgroundImage: "url(http://dummyimage.com/184x100.png/5fa2dd/ffffff)"
+										}}
+									/>
+									<h2 className="card-title">{movie.title}</h2>
+									<p>{movie.year}</p>
+									<p>{movie.imdb_id}</p>
 
-					<pre>
-						{JSON.stringify(trendingMovies, null, 2)}
-					</pre>
-
-					:
-					<p>
-						No movies loaded
-					</p>
+								</article>
+							))
+						}
+					</>
+					: null
 			}
 
 
 
-		</div>
+		</div >
 	)
 }
