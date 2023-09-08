@@ -9,8 +9,10 @@ function App() {
 	return (
 		<>
 			<h1>
+				
 				Welcome, using react with git
 			</h1>
+				<button onClick={() => setCount( count + 1)}>Update</button>
 		</>
 	)
 }
