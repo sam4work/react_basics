@@ -4,6 +4,8 @@ import {
 import App from "./App";
 import PostList from "./posts/PostList";
 import PostView from "./posts/PostView";
+import BluePage from "./pages/BluePage";
+import GreenPage from "./pages/GreenPage";
 
 
 export const AppRouter = createBrowserRouter([
@@ -18,6 +20,14 @@ export const AppRouter = createBrowserRouter([
 	{
 		path: "/posts/:slug",
 		element: <PostView />,
+	},
+	{
+		path: "/blue",
+		element: <BluePage />,
+	},
+	{
+		path: "/green",
+		element: <GreenPage />,
 	},
 
 ]);
