@@ -5,7 +5,7 @@ export default function BluePage(props) {
   return (
     <>
       <div>BluePage</div>
-      <Link to={"/GreenPage"}>Go to GreenPage</Link>
+      <Link to={"/green"}>Go to GreenPage</Link>
 
       <p>
         {

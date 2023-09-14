@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function GreenPage(props) {
   return (
     <>
       <div>GreenPage</div>
-      <Link to={"/BluePage"}>Go to BluePage</Link>
+      <Link to={"/blue"}>Go to BluePage</Link>
 
       <p>
         {
