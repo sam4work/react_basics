@@ -1,18 +1,26 @@
-import { useState } from 'react'
+import { Link } from "react-router-dom"
 import './App.css'
+import useUserContext from "./hooks/useUserContext"
 
 function App() {
-	const [count, setCount] = useState(1)
 
+	const user = useUserContext()
 	return (
 		<>
-			<h1>
-				Welcome, using react with git and Odartei
+
+			<h1 className="text-7xl">
+				Welcome to react
 			</h1>
 
-			<button onClick={() => setCount(count + 1)}>Update</button>
+			<p>
+				{
+					JSON.stringify(user)
+				}
+			</p>
 
-			<p>You have clicked {count} number of times!</p>
+			<Link to={"/dashboard"}>
+				Dashboard
+			</Link>
 		</>
 	)
 }

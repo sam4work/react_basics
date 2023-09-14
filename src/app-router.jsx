@@ -2,10 +2,9 @@ import {
 	createBrowserRouter,
 } from "react-router-dom";
 import App from "./App";
-import PostList from "./posts/PostList";
-import PostView from "./posts/PostView";
-import BluePage from "./pages/BluePage";
-import GreenPage from "./pages/GreenPage";
+import Dashboard from "./components/Dashboard";
+import MyUserContext from "./contexts/MyUserContext";
+
 
 
 export const AppRouter = createBrowserRouter([
@@ -14,20 +13,9 @@ export const AppRouter = createBrowserRouter([
 		element: <App />,
 	},
 	{
-		path: "/posts",
-		element: <PostList />,
+		path: "/dashboard",
+		element: <MyUserContext>
+			<Dashboard />
+		</MyUserContext>,
 	},
-	{
-		path: "/posts/:slug",
-		element: <PostView />,
-	},
-	{
-		path: "/blue",
-		element: <BluePage fullName = "John Doe" />,
-	},
-	{
-		path: "/green",
-		element: <GreenPage fullName = "Mary Doe" />,
-	},
-
 ]);
