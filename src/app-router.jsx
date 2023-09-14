@@ -1,24 +1,21 @@
 import {
 	createBrowserRouter,
 } from "react-router-dom";
-// import App from "./App";
-import BluePage from "./components/BluePage";
-import RedPage from "./components/RedPage";
-import ParentComponent from "./components/ParentComponent";
+import App from "./App";
+import Dashboard from "./components/Dashboard";
+import MyUserContext from "./contexts/MyUserContext";
 
 
 export const AppRouter = createBrowserRouter([
 	{
 		path: "/",
-		element: <ParentComponent />,
+		element: <App />,
 	},
 	{
-		path: "/blue",
-		element: <BluePage />,
-	},
-	{
-		path: "/red",
-		element: <RedPage fullName="Mary Doe" />,
+		path: "/dashboard",
+		element: <MyUserContext>
+			<Dashboard />
+		</MyUserContext>,
 	},
 
 ]);

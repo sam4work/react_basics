@@ -1,28 +1,25 @@
-import { useCallback, useState } from 'react'
+import { Link } from "react-router-dom"
 import './App.css'
+import useUserContext from "./hooks/useUserContext"
 
 function App() {
 
-	const [fullName, setfullName] = useState("")
-
-	// useCallback take a callback and dependancy array as parameters
-	const getFirstName = useCallback(function () {
-		return fullName.split(" ")[0]
-	}, [fullName])
-
+	const user = useUserContext()
 	return (
 		<>
-
-			{/* React CallBack Hook */}
-			<input
-				type="text"
-				onChange={(e) => setfullName(e.target.value)}
-			/>
+			<h1 className="text-7xl">
+				Welcome to react
+			</h1>
 
 			<p>
-				{getFirstName()}
+				{
+					JSON.stringify(user)
+				}
 			</p>
 
+			<Link to={"/dashboard"}>
+				Dashboard
+			</Link>
 		</>
 	)
 }
