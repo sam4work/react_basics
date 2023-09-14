@@ -23,11 +23,11 @@ export const AppRouter = createBrowserRouter([
 	},
 	{
 		path: "/blue",
-		element: <BluePage />,
+		element: <BluePage fullName = "John Doe" />,
 	},
 	{
 		path: "/green",
-		element: <GreenPage />,
+		element: <GreenPage fullName = "Mary Doe" />,
 	},
 
 ]);

@@ -4,9 +4,9 @@ export const MyFamilyNameContext = createContext()
 
 export default function FamilyNameContext(children) {
 
-    const familyName = "Mike";
+  const familyName = "Mike";
     
   return (
-    <MyFamilyNameContext.Provider value = {{ familyName:  }}
+    <MyFamilyNameContext.Provider value = {{ familyName:  }} />
   )
 }

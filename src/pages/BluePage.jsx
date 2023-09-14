@@ -1,7 +1,15 @@
 import React from 'react'
 
-export default function BluePage() {
+export default function BluePage(props) {
   return (
-    <div>BluePage</div>
+    <>
+      <div>BluePage</div>
+
+      <p>
+        {
+          JSON.stringify(props)
+        }
+      </p>
+    </>
   )
 }
