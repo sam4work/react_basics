@@ -8,6 +8,7 @@ import BluePage from "./BluePage";
 import RedPage from "./RedPage";
 
 
+
 export const AppRouter = createBrowserRouter([
 	{
 		path: "/",
@@ -23,12 +24,15 @@ export const AppRouter = createBrowserRouter([
 	},
 	{
 		path: "/blue",
+
 		element: <BluePage fullname='kwame Adams'/>,
 	},
 	{
 		path: "/red",
 		element: <RedPage fullname='mary jane'/>,
 	},
+
+
 
 
 ]);

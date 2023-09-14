@@ -7,7 +7,7 @@ function App() {
 	return (
 		<>
 			<h1>
-				Welcome, using react with git
+				Welcome, using react with git and Odartei
 			</h1>
 
 			<button onClick={() => setCount(count + 1)}>Update</button>
