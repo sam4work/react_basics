@@ -1,18 +1,28 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './App.css'
 
 function App() {
-	const [count, setCount] = useState(1)
+
+	const [fullName, setfullName] = useState("")
+
+	// useCallback take a callback and dependancy array as parameters
+	const getFirstName = useCallback(function () {
+		return fullName.split(" ")[0]
+	}, [fullName])
 
 	return (
 		<>
-			<h1>
-				Welcome, using react with git
-			</h1>
 
-			<button onClick={() => setCount(count + 1)}>Update</button>
+			{/* React CallBack Hook */}
+			<input
+				type="text"
+				onChange={(e) => setfullName(e.target.value)}
+			/>
 
-			<p>You have clicked {count} number of times!</p>
+			<p>
+				{getFirstName()}
+			</p>
+
 		</>
 	)
 }
