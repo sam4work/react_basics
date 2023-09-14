@@ -4,6 +4,8 @@ import './index.css'
 import { BrowserRouter, RouterProvider } from "react-router-dom"
 import { AppRouter } from "./app-router.jsx"
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<RouterProvider router={AppRouter} />
