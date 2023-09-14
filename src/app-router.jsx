@@ -1,23 +1,24 @@
 import {
 	createBrowserRouter,
 } from "react-router-dom";
-import App from "./App";
-import PostList from "./posts/PostList";
-import PostView from "./posts/PostView";
+// import App from "./App";
+import BluePage from "./components/BluePage";
+import RedPage from "./components/RedPage";
+import ParentComponent from "./components/ParentComponent";
 
 
 export const AppRouter = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />,
+		element: <ParentComponent />,
 	},
 	{
-		path: "/posts",
-		element: <PostList />,
+		path: "/blue",
+		element: <BluePage />,
 	},
 	{
-		path: "/posts/:slug",
-		element: <PostView />,
+		path: "/red",
+		element: <RedPage fullName="Mary Doe" />,
 	},
 
 ]);
