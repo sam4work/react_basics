@@ -1,19 +1,18 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const UserContext = createContext(null)
 
-const user = {
-	firstName: "John",
-	lastName: "Doe",
-	email: "johndoe@gmail.com",
-	password: "1234",
-}
+
 
 // eslint-disable-next-line react/prop-types
 export default function MyUserContext({ children }) {
 
+	const [user, setUser] = useState(null)
+
 	return (
-		<UserContext.Provider value={user}>
+		<UserContext.Provider value={{
+			user, setUser
+		}}>
 			{children}
 		</UserContext.Provider>
 	)

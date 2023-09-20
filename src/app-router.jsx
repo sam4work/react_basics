@@ -3,7 +3,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Dashboard from "./components/Dashboard";
-import MyUserContext from "./contexts/MyUserContext";
+import Login from "./components/Login";
 
 
 export const AppRouter = createBrowserRouter([
@@ -13,9 +13,11 @@ export const AppRouter = createBrowserRouter([
 	},
 	{
 		path: "/dashboard",
-		element: <MyUserContext>
-			<Dashboard />
-		</MyUserContext>,
+		element: <Dashboard />
+	},
+	{
+		path: "/login",
+		element: <Login />
 	},
 
 ]);
